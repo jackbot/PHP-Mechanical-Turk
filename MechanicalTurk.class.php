@@ -59,7 +59,7 @@ class MechanicalTurk {
 		$url .= '&Question=' . ($question != null) ? $question : urlencode($defaults['question']);
 		$url .= '&AssignmentDurationInSeconds=' . $this->defaults['duration'];
 		$url .= '&AutoApprovalDelayInSeconds=' . $this->defaults['auto_approve'];
-		$url .= (isset($params['qualifiction_requirement'])) ? $this->generateQualificationRequirement($params['qualification_requirement']) : $this->generateQualificationRequirement($defaults['qualification_requirement']);
+		$url .= (isset($params['qualification_requirement'])) ? $this->generateQualificationRequirement($params['qualification_requirement']) : $this->generateQualificationRequirement($defaults['qualification_requirement']);
 		$url .= '&LifetimeInSeconds=' . (isset($params['lifetime'])) ? urlencode($params['lifetime']) : $this->defaults['lifetime'];
 		$url .= '&Keywords=' . (isset($params['keywords'])) ? urlencode(implode(', ', $params['keywords'])) : urlencode(implode(', ', $this->defaults['keywords']));
 		if (isset($params['requester_annotation'])) {
