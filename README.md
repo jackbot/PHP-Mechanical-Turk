@@ -1,3 +1,9 @@
+# Please note this is no longer maintained!
+
+## I'm leaving it here for reference only, the Mechanical Turk API may have changed!
+
+
+----
 A PHP wrapper for the Amazon Mechanical Turk REST API. You'll need an Amazon Web Services account to use it (you can get one from http://aws.amazon.com)
 
 Here's an example of how to use the class.
@@ -16,7 +22,7 @@ Here's an example of how to use the class.
 		'reward_currency' => 'EUR'
 	);
 	$response = $mturk->createHit($another_question, $params);
-	
+
 	$hits = $mturk->getReviewableHITs();
 
 	$account_balance = $mturk->getAccountBalance();
